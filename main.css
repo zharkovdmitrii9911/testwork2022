@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(53, 53, 53);
+  }
+  td{
+    padding: 0px;
+    margin: 0px;
+  }
+  .HeaderButton{
+    background-color: rgb(116, 116, 116);
+    border: hidden;
+    cursor: pointer;
+  }
+  .container{
+    position: absolute;
+    top: 50px;
+    width: 28%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgb(116, 116, 116);
+    border: 5px;
+    border-color: azure;
+    border-radius: 5px;
+    font-size: 15px;
+    display:none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .RegistrationSend{
+    display:none;
+    margin-bottom: 5px;
+      margin-left: 40%;
+      cursor: pointer;
+  }
+  .UnVivible{
+    display: none;
+  }
+  .formVisibility
+  {
+    display:block;
+    transition: display 0.5s;
+  }
+  header div{
+    margin: 0px;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  header{
+    
+    background-color: rgb(116, 116, 116);
+    height: 40px;
+    
+    width: 100%;
+  }
+  button{
+    margin-bottom: 5px;
+    display: flex;
+      margin-left: 40%;
+      
+  }
+  .Error{
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 1em red;
+    color: rgb(206, 3, 3);
+  }
+  .Success{
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(9, 255, 0);
+    color: rgb(38, 248, 31);
+  }
+
+  .Text{
+    text-align: right;
+    visibility:inherit;
+
+  }
