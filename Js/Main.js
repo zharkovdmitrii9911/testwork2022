@@ -214,6 +214,3 @@ document.addEventListener("DOMContentLoaded",function() {
     }
     document.cookie = name + "=" + (value || "")  + expires + "; path=/";
 }
-
-
-  
