@@ -95,11 +95,11 @@ function InputCheck() {
   var Pass1 = document.getElementById('RegistrationPass1').value;
   var Button = document.getElementById('RegistrationSend');
   
-  var Passisre = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/;
+  var Passisre = /(?=.*[0-9])(?=^\S+$)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/;
   var PassisValid = Passisre.test(Pass);  
-  var loginre =/^\S+$.{6,30}/;
+  var loginre =/(?=^\S*$)(?=^.{6,30}$)/;
   var loginisValid = loginre.test(login);
-  var Namere =/^[^-\s]{2,20}$/;
+  var Namere =/(?=^\D*$)(?=^\S*$)(?=^.{2,20}$)/;
   var NameisValid = Namere.test(Name);
   var Emailre = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/; 
   var EmailisValid = Emailre.test(Email);
@@ -110,18 +110,20 @@ function InputCheck() {
     confirm_password= true;
   }else{
     confirm_password= false;
-    errormassege+= ("Пароли не совпадают");
+    if (Pass.length>0) {
+      errormassege+= ("Пароли не совпадают");
+    }
   }    
-  if (!PassisValid) {
+  if (!PassisValid&&Pass.length>0) {
     errormassege+= ("<br>Этот пароль не подходит")
   }
-  if (!loginisValid) {
+  if (!loginisValid&&login.length>0) {
     errormassege+= ("<br>Этот логин не подходит <br> минимум 6 символов")
   }
-  if (!NameisValid) {
-    errormassege+= ("<br>Этот имя не подходит <br> минимум 2 символов")
+  if (!NameisValid&&Name.length>0) {
+    errormassege+= ("<br>Этот имя не подходит <br> минимум 2 символов, только буквы")
   }
-  if (!EmailisValid) {
+  if (!EmailisValid&&Email.length>0) {
     errormassege+= ("<br>Неправильное написание почты, пожалуйста проверьте")
   }
 
