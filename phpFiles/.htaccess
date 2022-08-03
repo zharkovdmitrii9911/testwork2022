@@ -3,3 +3,7 @@ Options -Indexes
 Order Deny,Allow
 Deny from Allow
 #Allaw
+<Files Users.json>
+    order allow,deny
+    deny from all
+    </Files>

@@ -9,6 +9,9 @@ body{
     padding: 0px;
     margin: 0px;
   }
+  .Errormess{
+    border: solid red;
+  }
   .HeaderButton{
     background-color: rgb(116, 116, 116);
     border: hidden;

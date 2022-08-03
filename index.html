@@ -25,18 +25,20 @@
             <table>
                 <tr>
                     <td><p class="Text">Логин</p></td>
-                    <td><input type="text" onchange="InputCheck()" id="RegistrationLogin"></td>
+                    <td><input type="text" onchange="InputCheck();checklogin()" id="RegistrationLogin"></td>
                     
-                </tr>
-                
+                </tr>   
+                <tr><td><p class="Error" id="loginmessage"></p></td></tr>
                 <tr>
                     <td><p class="Text">Имя</p></td>
                     <td><input type="text" onchange="InputCheck()" id="RegistrationName"></td>
                 </tr>
                 <tr>
                     <td><p class="Text">Почта</p></td>
-                    <td><input type="text" onchange="InputCheck()" id="RegistrationEmail"></td>
+                    <td><input type="text" onchange="InputCheck();checkEmail()" id="RegistrationEmail"></td>
+                    
                 </tr>
+                <tr><td><p class="Error" id="emailmessage"></p></td></tr>
                 <tr>
                     <td><p class="Text">Пароль</p></td>
                     <td><input onchange="InputCheck()" type="password" id="RegistrationPass"></td>

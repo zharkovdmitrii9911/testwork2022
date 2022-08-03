@@ -5,7 +5,8 @@ include 'xmlworker.php';
 $UserWork = new XMLworker;
 if (isset($_POST['Operation'])) {
 if ($_POST['Operation']=='registration') {
-    if (!$UserWork->Search($_POST['Login'])){
+    if ((!$UserWork->Search($_POST['Login']))&&
+    (!$UserWork->SearchEmail($_POST['Email']))){
         $user = new User();
         $user ->LogIn = $_POST['Login'];
         $user ->Name = $_POST['Name'];
@@ -47,7 +48,21 @@ if ($_POST['Operation']=='registration') {
         if ($UserWork->Search($_POST['Login'])){
             echo'Такой логин уже существует';
         }
-    } */  
+    } */ 
+    if ($_POST['Operation']=='Checklogin') {
+        if (!$UserWork->Search($_POST['Login'])){
+            echo 'not found';
+        }else{
+            echo 'found';
+        }
+    }
+    if ($_POST['Operation']=='CheckEmail') {
+        if (!$UserWork->SearchEmail($_POST['Email'])){
+            echo 'not found';
+        }else{
+            echo 'found';
+        }
+    }  
 }
 
 /*session_start();
