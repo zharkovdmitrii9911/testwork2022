@@ -133,13 +133,13 @@ function InputCheck() {
   {Button.disabled=true;}
 
   RegistrationFormError.innerHTML = errormassege
-  console.log("Pass1 ="+Pass);
+  /*console.log("Pass1 ="+Pass);
   console.log("Pass2 ="+Pass1);
   console.log("PassisValid ="+PassisValid);
   console.log("loginisValid ="+loginisValid);
   console.log("NameisValid ="+NameisValid);
   console.log("EmailisValid ="+EmailisValid);
-  console.log("confirm_ligin ="+confirm_ligin);
+  console.log("confirm_ligin ="+confirm_ligin);*/
 }
 
 function UserLogOut() {
