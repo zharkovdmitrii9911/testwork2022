@@ -104,7 +104,7 @@ function InputCheck() {
   var Emailre = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/; 
   var EmailisValid = Emailre.test(Email);
   var confirm_password = false;
-  var confirm_ligin = false;
+
   var errormassege="";
   if (Pass==Pass1) {
     confirm_password= true;
@@ -127,19 +127,19 @@ function InputCheck() {
     errormassege+= ("<br>Неправильное написание почты, пожалуйста проверьте")
   }
 
-  if (PassisValid&&loginisValid&&confirm_ligin&&
-    NameisValid&&EmailisValid&&confirm_password) {
+  if (PassisValid&&loginisValid&&NameisValid&&EmailisValid&&confirm_password) {
     Button.disabled=false;
   }else
   {Button.disabled=true;}
 
   RegistrationFormError.innerHTML = errormassege
-  /*console.log("Pass1 ="+Pass);
+  console.log("Pass1 ="+Pass);
   console.log("Pass2 ="+Pass1);
   console.log("PassisValid ="+PassisValid);
   console.log("loginisValid ="+loginisValid);
   console.log("NameisValid ="+NameisValid);
-  console.log("EmailisValid ="+EmailisValid);*/
+  console.log("EmailisValid ="+EmailisValid);
+  console.log("confirm_ligin ="+confirm_ligin);
 }
 
 function UserLogOut() {
